@@ -17,3 +17,4 @@ var_dump($mina);
 
 <h1>Mon premier chat s'appelle <?= $bianca->name; ?></h1>
 <p>Il peut faire <?= $bianca->cry() ?></p>
+<p>L'autre chat <?= $mina->name;?> peut aussi faire <?= $mina->cry(); ?></p>

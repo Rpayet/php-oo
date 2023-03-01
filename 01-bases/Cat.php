@@ -18,7 +18,7 @@ class Cat
 
     public function cry() 
     {
-        return 'Miaou !';
+        return 'Miaou ! par '.$this->name;
     }
 
 }
