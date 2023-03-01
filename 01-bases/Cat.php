@@ -4,7 +4,7 @@ class Cat
 {
 
     public $name;
-    public $type = 'Européen'; //Same
+    private $type = 'Européen'; //Same
     private $fur;
     private $isChipped = false;
 
@@ -17,6 +17,18 @@ class Cat
         $this->type = $type;
     }
 
+
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    public function setType($type) 
+    {
+        $this->type = $type;
+
+        return $this;
+    }
 
     /**
      * Getter qui permet d'accéder à une propriété privée
@@ -41,6 +53,18 @@ class Cat
         return 'Miaou ! par '.$this->name;
     }
 
+    /**
+     * Getter custom
+     */
+
+    public function chippedInformation() 
+    {
+        if ($this->isChipped) {
+            return $this->name.' est pucé(e).';
+        }
+
+        return $this->name.' n\'est pas pucé(e).';
+    }
 
     /**
      * Setter custom
