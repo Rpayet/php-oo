@@ -5,7 +5,8 @@ class Cat
 
     public $name;
     public $type = 'Européen'; //Same
-    public $fur;
+    private $fur;
+    private $isChipped = false;
 
     public function __construct($name, $type = 'Européen', ) // type Same
     {
@@ -16,9 +17,39 @@ class Cat
         $this->type = $type;
     }
 
+
+    /**
+     * Getter qui permet d'accéder à une propriété privée
+     */
+    public function getFur()
+    {
+        return $this->fur;
+    }
+
+    /**
+     * Setter permet de modifier une propriété privée
+     */
+    public function setFur($fur) {
+        $this->fur = $fur;
+        return $this;
+    }
+
+    
+
     public function cry() 
     {
         return 'Miaou ! par '.$this->name;
+    }
+
+
+    /**
+     * Setter custom
+     */
+    public function chipWithDoctor() 
+    {
+        $this->isChipped = true;
+
+        return $this;
     }
 
 }

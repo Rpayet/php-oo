@@ -6,10 +6,12 @@ require __DIR__.'/Cat.php';
 // Un objet (instance de classe)
 $bianca = new Cat('Bianca');
 // $bianca->name = 'Bianca';
-$bianca->fur = 'Blanc';
+// $bianca->fur = 'Blanc';
+$bianca->setFur('Blanc');
 
 $mina = new Cat('Mina', 'Siamois');
-$mina->fur = 'Noir';
+// $mina->fur = 'Noir';
+$mina->chipWithDoctor(); // Setter sur une propriété privée
 
 var_dump($bianca);
 var_dump($mina);
