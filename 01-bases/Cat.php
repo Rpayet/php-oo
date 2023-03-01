@@ -53,6 +53,17 @@ class Cat
         return 'Miaou ! par '.$this->name;
     }
 
+
+    /**
+     * Permet de joeur avec un autre chat
+     * On peut typer les arguments avec le nom d'une classe
+     * pour forcer cet arguùent à être un Cat.
+     */
+    public function playWith(Cat $otherCat)
+    {
+        return $this->name.' joue avec '.$otherCat->name;
+    }
+
     /**
      * Getter custom
      */

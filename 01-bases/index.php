@@ -12,10 +12,13 @@ $bianca->setFur('Blanc');
 $mina = new Cat('Mina', 'Siamois');
 // $mina->fur = 'Noir';
 $mina->chipWithDoctor(); // Setter sur une propriété privée
-$mina->setFur('Noir')->chipWithDoctor();
+$mina->setFur('Noir')
+    ->chipWithDoctor();
 
 $lais = new Cat('Lais');
-$lais->setFur('Tricolor')->setType('Groku')->chipWithDoctor();
+$lais->setFur('Tricolor')
+    ->setType('Groku')
+    ->chipWithDoctor();
 var_dump($bianca);
 var_dump($mina);
 var_dump($lais);
@@ -27,3 +30,5 @@ var_dump($lais);
 
 <p>Etat de Mina <?= $mina->chippedInformation(); ?></p>
 <p>Couleur de Mina : <?= $mina->getFur(); ?></p>
+
+<p><?= $bianca->playWith($lais); ?></p>
