@@ -36,9 +36,13 @@ En bonus, une voiture a une jauge d'essence (50 pour 50L). On réduit la jauge d
 
 
 
-<p>Réserve d'essence = <?= $car1->drive() ?></p>
-<p>Réserve d'essence = <?= $car1->drive() ?></p>
-<p>Réserve d'essence = <?= $car1->drive() ?></p>
+<?php while($car1->getGas() > 0) { ?>
+    <p>Réserve d'essence = <?= $car1->drive() ?></p>
+<?php } ?>
+
+<p>Réservoir d'essence = <?= $car1->drive(); ?></p>
+<p>Réservoir d'essence = <?=$car1->fill(10)->drive(); ?></p>
+
 
 
 

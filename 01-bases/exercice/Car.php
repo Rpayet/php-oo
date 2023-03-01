@@ -29,7 +29,18 @@
 
         public function drive()
         {
-            return $this->gasMeter -= 2;
+            $this->gasMeter -= 2;
+            if ($this->gasMeter <= 0) {
+                return 'Stop!';
+            }
+            return 'Vroum';
+        }
+        public function fill($gasMeter = 50) {
+            $this->gasMeter += $gasMeter;
+            if ($this->gasMeter > 50) {
+                $this->gasMeter = 50; 
+            }
+            return $this;
         }
 
         public function honk() 
