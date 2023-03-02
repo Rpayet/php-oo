@@ -20,12 +20,13 @@
             return $damage;
         }
 
-        public function rangedAttack(Character $target) 
+        public function rangedAttack(Character ...$targets) 
         {
             if ($this instanceof Hunter) {
-                $damage = $this->ap * 3;
-                $target->takeDamage($damage);
-                return $damage;
+                foreach ($targets as $target) {
+                    $damage = $this->ap * 3;
+                    $target->takeDamage($damage);
+                }
             } else {
                 return 0;
             }
