@@ -20,22 +20,23 @@
             return $damage;
         }
 
-        protected function takeDamage($damage)
-        {
-            $this->hp -= $damage;
-            if ($this->hp < 0) {
-                $this->hp = 0;
-            }
-        }
-
         public function rangedAttack()
         {
+            
             return '';
         }
 
         public function castSpell()
         {
             return '';
+        }
+
+        protected function takeDamage($damage)
+        {
+            $this->hp -= $damage;
+            if ($this->hp < 0) {
+                $this->hp = 0;
+            }
         }
 
         
