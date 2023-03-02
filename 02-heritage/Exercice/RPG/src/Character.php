@@ -32,9 +32,14 @@
             }
         }
 
-        public function castSpell()
+        public function castSpell(Character $target)
         {
-            return '';
+            if ($this instanceof Magus) {
+                $damage = $this->mp * 3;
+                $target->takeDamage($damage);
+            } else {
+                return 0;
+            }
         }
 
         protected function takeDamage($damage)
