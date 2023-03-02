@@ -20,10 +20,15 @@
             return $damage;
         }
 
-        public function rangedAttack()
+        public function rangedAttack(Character $target) 
         {
-            
-            return '';
+            if ($this instanceof Hunter) {
+                $damage = $this->ap * 3;
+                $target->takeDamage($damage);
+                return $damage;
+            } else {
+                return 0;
+            }
         }
 
         public function castSpell()
