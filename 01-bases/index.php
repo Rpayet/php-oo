@@ -32,3 +32,5 @@ var_dump($lais);
 <p>Couleur de Mina : <?= $mina->getFur(); ?></p>
 
 <p><?= $bianca->playWith($lais); ?></p>
+
+<a href="exercice/books/index.php">Exo books</a>
