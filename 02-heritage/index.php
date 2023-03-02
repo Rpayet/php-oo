@@ -31,5 +31,7 @@
     <p><?= $cat->climbsOnRoof(); ?></p>
     <p><?= $dog->move(); ?></p>
 
+    <a href="exercice/RPG/index.php">Exo RPG</a>
+
 </body>
 </html>
