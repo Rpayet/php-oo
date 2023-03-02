@@ -43,8 +43,16 @@
             new Book('Coupe de feu', 500),
         ]);
         $l->books(); // Renvoie le tableau avec tous les livres
+        $l->count(); // Renvoie le nombre de livre dans la bibliothèque
 
-        echo $l;
+        $l->addBooks([new Book('Inspiration', 1500)]);
+        var_dump($l->books());
+        var_dump($l->count());
+        var_dump($l->totalPages());
+        $b2 = $l->getBook('Coupe de feu');
+        var_dump($b2);
+        var_dump($l->findBooksByLetter('C')); 
+
 
     ?>
 
