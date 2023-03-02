@@ -17,6 +17,7 @@
 
         $r = new Rectangle(10, 20);
         echo $r->perimeter(); // 60
+        echo $r->area();
         var_dump($r->isValid()); // true
         $r2 = new Rectangle(-10, 20);
         var_dump($r2->isValid()); // false
@@ -24,8 +25,8 @@
 
         $c = new Calculator();
         $c->add(10)->substract(4);
-        // $c->multiply(2)->divide(4);
-        // echo $c->result(); // 3
+        $c->multiply(2)->divide(4);
+        echo $c->result(); // 3
 
     ?>
 

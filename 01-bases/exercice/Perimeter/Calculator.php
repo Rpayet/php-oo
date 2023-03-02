@@ -2,22 +2,41 @@
 
     class Calculator 
     {
-        private $value;
         private $default = 0;
-
-        public function __construct($default)
-        {
-            $this->default = $default;
-        }
 
         public function add($value) 
         {
-            return $this->default += $value;
+            $this->default += $value;
+
+            return $this;
         }
 
         public function substract($value) 
         {
-            return $this->default -= $value;
+            $this->default -= $value;
+            
+            return $this;
+        }
+
+        public function multiply($value) 
+        {
+            $this->default *= $value;
+            
+            return $this;
+        }
+
+        public function divide($value) 
+        {
+            $this->default /= $value;
+
+            return $this;
+    
+        }
+
+        public function result() {
+
+            return $this->default;
+            
         }
     }
 ?>

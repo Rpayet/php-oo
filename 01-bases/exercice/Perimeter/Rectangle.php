@@ -1,7 +1,7 @@
 <?php
 
-    class Rectangle {
-
+    class Rectangle 
+    {
         private $width;
         private $height;
 
@@ -13,6 +13,10 @@
         public function perimeter() {
             
             return ($this->width + $this->height) * 2;
+        }
+
+        public function area() {
+            return $this->width * $this->height;
         }
 
         public function isvalid() {
