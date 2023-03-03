@@ -14,6 +14,11 @@
             $this->name = $name;
         }
 
+        public function getHp() 
+        {
+            return $this->hp;
+        }
+
         public function attack(Character $target) 
         {
             $damage = $this->ap * 2;
