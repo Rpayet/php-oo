@@ -75,9 +75,16 @@
             return 'Inventaire plein';
         }
         
-        public function use() 
+        public function use($item)  
         {
-
+            if (array_search($item, $this->inventory) ) 
+            {
+                if ($item instanceof Potion) {
+                    return 'Objet de soin';
+                } else if ($item instanceof Equipement) {
+                    return 'Equipement';
+                }
+            }
         }
 
     }

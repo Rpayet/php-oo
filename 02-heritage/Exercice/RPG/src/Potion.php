@@ -1,6 +1,7 @@
 <?php
 
-class Potion extends Item {
+class Potion extends Item 
+{
 
     public function __construct($name)
     {

@@ -17,6 +17,7 @@
         require __DIR__.'/src/Dwarf.php';
         require __DIR__.'/src/Item.php';
         require __DIR__.'/src/Potion.php';
+        require __DIR__.'/src/Equipement.php';
 
         $aragorn = new Warrior('Aragorn');
         $legolas = new Hunter('Legolas');
