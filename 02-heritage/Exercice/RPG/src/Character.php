@@ -23,10 +23,12 @@
         public function rangedAttack(Character ...$targets) 
         {
             if ($this instanceof Hunter) {
+
                 foreach ($targets as $target) {
-                    $damage = $this->ap * 3;
+                    $damage = floor(($this->ap * 3) / count($targets));
                     $target->takeDamage($damage);
                 }
+
             } else {
                 return 0;
             }
