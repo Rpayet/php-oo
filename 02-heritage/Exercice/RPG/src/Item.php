@@ -1,7 +1,7 @@
 <?php
     class Item 
     {
-        protected $name;
+        public $name;
         private $modifier;
 
         public function __construct($name) 

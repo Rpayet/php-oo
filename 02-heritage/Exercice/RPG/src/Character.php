@@ -2,7 +2,7 @@
 
     class Character {
 
-        protected $name;
+        public $name;
         private $hp = 100;
         protected $ap = 10;
         protected $mp = 10;
@@ -63,19 +63,14 @@
             return $this->inventory;
         }
 
-        public function pick(Item ...$items) 
+        public function pick($item) 
         {
             $limit = 3; 
-            if (count($this->inventory) < $limit ) 
-            {
-                foreach ($items as $item)
-                {
-                    if (count($this->inventory) < $limit ) {
-                        $this->inventory[] = $item;
-                    }                     
-                }
-                return (count($items) > $limit ) ? 'Objets ajoutés à l\'inventaire' : 'Objet ajouté à l\'inventaire';
-            }
+            
+            if (count($this->inventory) < $limit ) {
+                $this->inventory[] = $item;
+                return 'Objet ajouté à l\'inventaire';
+            }                     
 
             return 'Inventaire plein';
         }

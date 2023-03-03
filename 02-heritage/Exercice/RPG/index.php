@@ -30,10 +30,10 @@
         $aragorn->attack($legolas); // Enlève X points de vie en fonction de la force (Force x 2)
         $legolas->rangedAttack($gandalf, $aragorn, $gimli, $boromir); // Enlève X points de vie si le personnage est chasseur (Force x 3)
         $gandalf->castSpell($aragorn); // Enlève X points de vie en fonction du mana (Mana x 3)
-        $aragorn->pick($potion1, $potion2, $potion3);
+        $aragorn->pick($potion1);
         var_dump($legolas, $aragorn, $gandalf, $gimli, $boromir);
         
-        
+        echo $aragorn->name.' trouve '.$potion1->name.' : '.$aragorn->pick($potion1, $potion2, $potion3);
         
     ?>
 
