@@ -77,7 +77,7 @@
         
         public function use($item)  
         {
-            if (array_search($item, $this->inventory) ) 
+            if (in_array($item, $this->inventory) ) 
             {
                 if ($item instanceof Potion) {
                     return 'Objet de soin';

@@ -24,18 +24,17 @@
         $gandalf = new Magus('Gandalf');
         $gimli = new Dwarf('Gimli');
         $boromir = new Warrior('Boromir');
-        $potion1 = new Potion('Potion de soin');
-        $potion2 = new Potion('Potion de soin');
-        $potion3 = new Potion('Potion de soin');
+        $potion = new Potion('Potion de soin');
+        
 
         $aragorn->attack($legolas); // Enlève X points de vie en fonction de la force (Force x 2)
         $legolas->rangedAttack($gandalf, $aragorn, $gimli, $boromir); // Enlève X points de vie si le personnage est chasseur (Force x 3)
         $gandalf->castSpell($aragorn); // Enlève X points de vie en fonction du mana (Mana x 3)
-        $aragorn->pick($potion1);
+        $aragorn->pick($potion);
         var_dump($legolas, $aragorn, $gandalf, $gimli, $boromir);
         
-        echo $aragorn->name.' trouve '.$potion1->name.' : '.$aragorn->pick($potion1, $potion2, $potion3);
-        
+        echo $aragorn->name.' trouve '.$potion->name.' : '.$aragorn->pick($potion);
+        echo $aragorn->use($potion);
     ?>
 
 </body>
