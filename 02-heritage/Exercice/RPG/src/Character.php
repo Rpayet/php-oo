@@ -58,11 +58,28 @@
             }
         }
 
-        public function pick($item) 
+        public function getInventory() 
         {
-            return $this->inventory[] = $item;
+            return $this->inventory;
         }
 
+        public function pick(Item ...$items) 
+        {
+            $limit = 3; 
+            if (count($this->inventory) < $limit ) 
+            {
+                foreach ($items as $item)
+                {
+                    if (count($this->inventory) < $limit ) {
+                        $this->inventory[] = $item;
+                    }                     
+                }
+                return (count($items) > $limit ) ? 'Objets ajoutés à l\'inventaire' : 'Objet ajouté à l\'inventaire';
+            }
+
+            return 'Inventaire plein';
+        }
+        
         public function use() 
         {
 

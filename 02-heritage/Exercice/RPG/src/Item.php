@@ -16,10 +16,10 @@
         }
 
         public function powerUp($power)
-    {
-        $this->modifier = $power;
-        return $this;
-    }
+        {
+            $this->modifier = $power;
+            return $this;
+        }
 
     }
 ?>
