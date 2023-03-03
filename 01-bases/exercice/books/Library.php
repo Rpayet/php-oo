@@ -7,7 +7,7 @@
 
         public function addBook($book)
         {
-            return $this->books[] = $book;;
+            return $this->books[] = $book;
         }
 
         public function addBooks($books) 

@@ -58,9 +58,9 @@
             }
         }
 
-        public function pick() 
+        public function pick($item) 
         {
-
+            return $this->inventory[] = $item;
         }
 
         public function use() 
