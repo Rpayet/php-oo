@@ -16,12 +16,14 @@
         require __DIR__.'/src/Magus.php';
         require __DIR__.'/src/Dwarf.php';
         require __DIR__.'/src/Item.php';
+        require __DIR__.'/src/Potion.php';
 
         $aragorn = new Warrior('Aragorn');
         $legolas = new Hunter('Legolas');
         $gandalf = new Magus('Gandalf');
         $gimli = new Dwarf('Gimli');
         $boromir = new Warrior('Boromir');
+        $potion = new Potion('Potion de soin');
 
         $aragorn->attack($legolas); // Enlève X points de vie en fonction de la force (Force x 2)
         $legolas->rangedAttack($gandalf, $aragorn, $gimli, $boromir); // Enlève X points de vie si le personnage est chasseur (Force x 3)

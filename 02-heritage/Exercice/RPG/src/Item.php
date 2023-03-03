@@ -4,7 +4,7 @@
         protected $name;
         private $modifier;
 
-        public function __contruct($name) 
+        public function __construct($name) 
         {
             $this->name = $name;
         }

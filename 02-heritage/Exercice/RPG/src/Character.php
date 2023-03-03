@@ -6,6 +6,7 @@
         private $hp = 100;
         protected $ap = 10;
         protected $mp = 10;
+        protected $inventory = [];
         
 
         public function __construct($name)
@@ -50,6 +51,16 @@
             if ($this->hp < 0) {
                 $this->hp = 0;
             }
+        }
+
+        public function pick() 
+        {
+
+        }
+
+        public function use() 
+        {
+
         }
 
     }
