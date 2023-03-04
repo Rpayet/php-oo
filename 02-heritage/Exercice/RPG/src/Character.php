@@ -77,11 +77,13 @@
         
         public function use($item)  
         {
-            if (in_array($item, $this->inventory) ) 
+            $index = array_search($item, $this->inventory);
+            if ($index !== false) 
             {
                 if ($item instanceof Potion) {
                     $restore = $item->heal();
                     $this->hp += $restore;
+                    unset($this->inventory[$index]);
                     return 'HP restauré de '.$restore.'pts';
 
                 } else if ($item instanceof Equipement) {
