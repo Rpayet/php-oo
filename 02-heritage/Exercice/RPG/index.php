@@ -34,7 +34,8 @@
         var_dump($legolas, $aragorn, $gandalf, $gimli, $boromir);
         
         echo $aragorn->name.' trouve '.$potion->name.' : '.$aragorn->pick($potion);
-        echo $aragorn->use($potion);
+        var_dump($aragorn->use($potion));
+        var_dump($aragorn);
     ?>
 
 </body>

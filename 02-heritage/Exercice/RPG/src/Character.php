@@ -80,11 +80,16 @@
             if (in_array($item, $this->inventory) ) 
             {
                 if ($item instanceof Potion) {
-                    return 'Objet de soin';
+                    $restore = $item->heal();
+                    $this->hp += $restore;
+                    return 'HP restauré de '.$restore.'pts';
+
                 } else if ($item instanceof Equipement) {
-                    return 'Equipement';
+                    return 'Equipement'; // @Todo
                 }
             }
+
+            return 'Objet non-conforme';
         }
 
     }

@@ -8,10 +8,10 @@ class Potion extends Item
         parent::__construct($name);
     }
 
-    public function heal($character) 
+    public function heal() 
     {
-        $heal = rand(floor($character->getHp() * 0.5), floor($character->getHp() * 0.7));
-        $character->heal($heal);
+        return rand(50, 70);
+        
     }
 
 }
