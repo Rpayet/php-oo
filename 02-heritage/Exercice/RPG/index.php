@@ -24,7 +24,7 @@
         $gandalf = new Magus('Gandalf');
         $gimli = new Dwarf('Gimli');
         $boromir = new Warrior('Boromir');
-        $potion = new Potion('Potion de soin');
+        $potion = new Potion('Potion HP');
         $sword = new Equipement('Sword');
         $shield = new Equipement('Shield');
         

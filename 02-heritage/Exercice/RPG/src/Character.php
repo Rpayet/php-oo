@@ -155,7 +155,7 @@
         {
             $this->experience++;
 
-            if ($this->experience >= 3) 
+            if ($this->experience >= 3 + $this->level) 
             {
                 $this->level++;
                 $this->experience = 0;
