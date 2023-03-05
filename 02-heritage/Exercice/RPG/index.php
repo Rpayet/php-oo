@@ -17,7 +17,7 @@
         require __DIR__.'/src/Dwarf.php';
         require __DIR__.'/src/Item.php';
         require __DIR__.'/src/Potion.php';
-        require __DIR__.'/src/Equipement.php';
+        require __DIR__.'/src/Equipment.php';
 
         $aragorn = new Warrior('Aragorn');
         $legolas = new Hunter('Legolas');
@@ -25,15 +25,18 @@
         $gimli = new Dwarf('Gimli');
         $boromir = new Warrior('Boromir');
         $potion = new Potion('Potion de soin');
+        $sword = new Equipement('Sword');
+        $shield = new Equipement('Shield');
         
-
+        $aragorn->pick($sword);
+        $legolas->pick($shield);
         $aragorn->attack($legolas); // Enlève X points de vie en fonction de la force (Force x 2)
         $legolas->rangedAttack($gandalf, $aragorn, $gimli, $boromir); // Enlève X points de vie si le personnage est chasseur (Force x 3)
         $gandalf->castSpell($aragorn); // Enlève X points de vie en fonction du mana (Mana x 3)
         
         var_dump($legolas, $aragorn, $gandalf, $gimli, $boromir);
         
-        echo $aragorn->name.' trouve '.$potion->name.' : '.$aragorn->pick($potion);
+        echo $aragorn->name.' ramasse '.$potion->name.' : '.$aragorn->pick($potion);
         var_dump($aragorn->use($potion));
         var_dump($aragorn);
     ?>
