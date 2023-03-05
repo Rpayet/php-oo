@@ -28,17 +28,31 @@
         $sword = new Equipement('Sword');
         $shield = new Equipement('Shield');
         
+        // Test équipement d'objet
         $aragorn->pick($sword);
         $legolas->pick($shield);
-        $aragorn->attack($legolas); // Enlève X points de vie en fonction de la force (Force x 2)
-        $legolas->rangedAttack($gandalf, $aragorn, $gimli, $boromir); // Enlève X points de vie si le personnage est chasseur (Force x 3)
-        $gandalf->castSpell($aragorn); // Enlève X points de vie en fonction du mana (Mana x 3)
+        $aragorn->attack($legolas); 
+        $legolas->rangedAttack($gandalf, $gimli); 
+        $gandalf->castSpell($aragorn);
         
-        var_dump($legolas, $aragorn, $gandalf, $gimli, $boromir);
-        
+        // test utilisation d'objet de l'inventaire
+        var_dump($aragorn);
         echo $aragorn->name.' ramasse '.$potion->name.' : '.$aragorn->pick($potion);
+        var_dump($aragorn);
         var_dump($aragorn->use($potion));
         var_dump($aragorn);
+
+        // Test passage de niveau
+        $aragorn->attack($legolas);
+        $aragorn->attack($gimli);
+        $aragorn->attack($gandalf);
+        $aragorn->attack($gimli);
+        $aragorn->attack($gandalf);
+
+        //Vérification de l'état des paramètres de chaque personnage
+        var_dump($legolas, $aragorn, $gandalf, $gimli, $boromir);
+
+
     ?>
 
 </body>

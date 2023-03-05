@@ -126,6 +126,9 @@
                 if ($item instanceof Potion) {
                     $restore = $item->heal();
                     $this->hp += $restore; // Vérifier que ça ne dépasse pas le max de HP du perso.
+                    if ($this->hp > 100) {
+                        $this->hp = 100;
+                    }
                     unset($this->inventory[$index]);
                     return 'HP restauré de '.$restore.'pts';
 
@@ -156,7 +159,7 @@
             {
                 $this->level++;
                 $this->experience = 0;
-                echo $this->name.' atteint le niveau '.$this->level.' !'.'\n';
+                echo $this->name.' atteint le niveau '.$this->level.' !'."\n";
             }
         }
 
