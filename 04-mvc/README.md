@@ -5,3 +5,15 @@ Après avoir cloné le dépôt, ne pas oubliez d'installer les dépendances Comp
 ```bash
 composer install
 ```
+
+```bash
+php -S 127.0.0.1:8000 -t public
+```
+
+```bash
+composer require --dev symfony/var-dumper
+```
+
+```bash
+composer require illuminate/collections
+```

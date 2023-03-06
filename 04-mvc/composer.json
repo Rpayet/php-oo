@@ -2,7 +2,7 @@
     "name": "portable/04-mvc",
     "autoload": {
         "psr-4": {
-            "Portable\\04Mvc\\": "src/"
+            "M2i\\Mvc\\": "src/"
         }
     },
     "authors": [
@@ -11,5 +11,10 @@
             "email": "robinpayet@gmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "symfony/var-dumper": "^6.2"
+    },
+    "require": {
+        "illuminate/collections": "^10.2"
+    }
 }
