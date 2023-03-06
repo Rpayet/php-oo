@@ -1,6 +1,6 @@
 <?php
 
-    namespace M2I\F1;
+    namespace M2i\F1;
 
     class Formula 
     {
