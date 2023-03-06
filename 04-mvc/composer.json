@@ -1,0 +1,15 @@
+{
+    "name": "portable/04-mvc",
+    "autoload": {
+        "psr-4": {
+            "Portable\\04Mvc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Robin Payet",
+            "email": "robinpayet@gmail.com"
+        }
+    ],
+    "require": {}
+}

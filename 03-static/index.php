@@ -25,7 +25,24 @@ var_dump($f1, $f2, $f3);
 
 // Exercice DB Static
 
-DB::select('SELECT * FROM movie');
+$movies = DB::select('SELECT * FROM movie');
+
+
+
+$movie = DB::selectOne('SELECT * FROM movie WHERE id_movie = :id', [
+    'id' => 1,
+]);
+
 var_dump($movie);
 
+DB::insert('INSERT INTO movie (title, released_at, description, duration, cover, id_category)
+    VALUES (:title, :released_at, :description, :duration, :cover, :id_category)', [
+        'title' => 'Test',
+        'released_at' => '2000-01-01',
+        'description' => 'Lorem Taguel',
+        'duration' => '90',
+        'cover' => 'test.jpg',
+        'id_category' => 1,
+    ]);
+    var_dump($movies);
 ?>
