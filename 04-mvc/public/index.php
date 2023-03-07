@@ -18,6 +18,8 @@ $app->addroutes([
     //Dans cette vue, on passera un paramètre qu'on affichera sur la page
     ['GET', '/', 'HomeController@index'],
     ['GET', '/les-films', 'MovieController@index'],
+    ['GET', '/film/[i:id]?', 'MovieController@show'],
+    ['GET', '/film/nouveau', 'MovieController@create'],
 
 ]);
 

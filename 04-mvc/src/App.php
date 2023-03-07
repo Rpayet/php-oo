@@ -27,7 +27,7 @@ class App extends AltoRouter
             [$controller, $method] = explode('@', $match['target']); // ['MovieController', 'index']
             $controller = '\\M2i\\Mvc\\Controller\\'.$controller;
             $controller = new $controller();
-            $controller->$method();
+            $controller->$method(... $match['params']);
             
         } else {
             http_response_code(404);

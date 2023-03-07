@@ -25,3 +25,7 @@ composer require filp/whoops
 # $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 # $whoops->register();
 ```
+
+```bash
+root avec Altorouter
+```

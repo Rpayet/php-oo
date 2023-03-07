@@ -14,6 +14,33 @@ class MovieController extends Controller
             'movies' => $movies,
         ]);
     }
+
+    public function show($id) 
+    {
+        $movie = Movie::find($id);
+        
+        if (!$movie) {
+            http_response_code(404);
+            return $this->render('404.html.php');
+        }
+
+        return $this->render('movies/show.html.php', [
+            'movie' => $movie,
+        ]);
+    }
+
+    public function create()
+    {
+        $movie = new Movie();
+        $movie->title = 'Un nouveau film';
+        $movie->released_at = '2023-10-08';
+        $movie->description = 'Lorem';
+        $movie->duration = 150;
+        $movie->cover = 'new.jpg';
+        $movie->id_category = 1;
+        $movie->save();
+        
+    }
 }
 
 

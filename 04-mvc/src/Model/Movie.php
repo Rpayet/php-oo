@@ -5,7 +5,7 @@ namespace M2i\Mvc\Model;
 class Movie extends Model
 {
     public $id_movie;
-    public $name;
+    public $title;
     public $released_at;
     public $description;
     public $duration;
