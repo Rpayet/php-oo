@@ -17,3 +17,11 @@ composer require --dev symfony/var-dumper
 ```bash
 composer require illuminate/collections
 ```
+
+```bash
+// Rapport d'erreur stylé
+composer require filp/whoops
+# $whoops = new \Whoops\Run;
+# $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+# $whoops->register();
+```
