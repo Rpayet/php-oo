@@ -12,8 +12,6 @@ class MovieController extends Controller
         
         return $this->render('movies/index.html.php', [
             'movies' => $movies,
-            'name' => 'Tintin',
-            'title' =>'au p\'tit b',
         ]);
     }
 }

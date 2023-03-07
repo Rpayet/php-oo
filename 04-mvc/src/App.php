@@ -31,8 +31,7 @@ class App extends AltoRouter
             
         } else {
             http_response_code(404);
-            // @todo Remplacer le echo par un fichier
-            echo '<h1>404</h1>';
+            require __DIR__.'/../templates/404.html.php';
         }
     }
 }
