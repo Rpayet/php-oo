@@ -1,0 +1,21 @@
+{
+    "name": "robin/m2i",
+    "autoload": {
+        "psr-4": {
+            "Book\\Mvc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rpayet",
+            "email": "robinpayet@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "symfony/var-dumper": "^6.2"
+    },
+    "require": {
+        "illuminate/collections": "^10.3",
+        "filp/whoops": "^2.15"
+    }
+}
