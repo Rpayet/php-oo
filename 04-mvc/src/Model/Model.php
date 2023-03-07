@@ -10,7 +10,13 @@ abstract class Model
     {
         $table = self::table();
 
-        return DB::select("SELECT * FROM $table");
+        // Poiur accéder au nom de la classe actuelle
+
+        // dump(get_called_class()); // M2i\Mvc\Model\Movie
+        // dump(self::class); // M2i\Mvc\Model\Model (Classe dans laquelle on écrit cela)
+        // dump(static::class); //M2i\Mvc\Model\Movie (Classe qui appelle la méthode all())
+
+        return DB::select("SELECT * FROM $table", [], get_called_class());
     }
 
 
@@ -20,8 +26,8 @@ abstract class Model
     private static function table(): string
     {
         $table = get_called_class(); //M2i\Mvc\Model\Movie
-        $table = substr(strrchr($table, '\\'), 1);
-        $table = strtolower($table);
+        $table = substr(strrchr($table, '\\'), 1); // Movie => Movie
+        $table = strtolower($table); // Movie => movie
 
         return$table;
     }
